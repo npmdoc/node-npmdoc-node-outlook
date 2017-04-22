@@ -1,0 +1,1635 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jasonjoh/node-outlook"
+
+    >node-outlook (v1.1.6)</a>
+</h1>
+<h4>A package for calling the Outlook APIs from Node.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook">module node-outlook</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>Microsoft</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>base</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>calendar</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>contacts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>mail</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-outlook.</span>utilities</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook.base">module node-outlook.base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.anchorMailbox">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>anchorMailbox
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.apiEndpoint">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>apiEndpoint
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.getUser">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>getUser
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.makeApiCall">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>makeApiCall
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.preferredTimeZone">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>preferredTimeZone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.setAnchorMailbox">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>setAnchorMailbox
+            <span class="apidocSignatureSpan">(newAnchor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.setApiEndpoint">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>setApiEndpoint
+            <span class="apidocSignatureSpan">(newEndPoint)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.setFiddlerEnabled">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>setFiddlerEnabled
+            <span class="apidocSignatureSpan">(enabled)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.setPreferredTimeZone">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>setPreferredTimeZone
+            <span class="apidocSignatureSpan">(preferredTimeZone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.base.setTraceFunc">
+            function <span class="apidocSignatureSpan">node-outlook.base.</span>setTraceFunc
+            <span class="apidocSignatureSpan">(traceFunc)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook.calendar">module node-outlook.calendar</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.calendar.createEvent">
+            function <span class="apidocSignatureSpan">node-outlook.calendar.</span>createEvent
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.calendar.deleteEvent">
+            function <span class="apidocSignatureSpan">node-outlook.calendar.</span>deleteEvent
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.calendar.getEvent">
+            function <span class="apidocSignatureSpan">node-outlook.calendar.</span>getEvent
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.calendar.getEvents">
+            function <span class="apidocSignatureSpan">node-outlook.calendar.</span>getEvents
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.calendar.updateEvent">
+            function <span class="apidocSignatureSpan">node-outlook.calendar.</span>updateEvent
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook.contacts">module node-outlook.contacts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.contacts.createContact">
+            function <span class="apidocSignatureSpan">node-outlook.contacts.</span>createContact
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.contacts.deleteContact">
+            function <span class="apidocSignatureSpan">node-outlook.contacts.</span>deleteContact
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.contacts.getContact">
+            function <span class="apidocSignatureSpan">node-outlook.contacts.</span>getContact
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.contacts.getContacts">
+            function <span class="apidocSignatureSpan">node-outlook.contacts.</span>getContacts
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.contacts.updateContact">
+            function <span class="apidocSignatureSpan">node-outlook.contacts.</span>updateContact
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook.mail">module node-outlook.mail</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.createMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>createMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.deleteMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>deleteMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.getMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>getMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.getMessages">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>getMessages
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.sendDraftMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>sendDraftMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.sendNewMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>sendNewMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.syncMessages">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>syncMessages
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.mail.updateMessage">
+            function <span class="apidocSignatureSpan">node-outlook.mail.</span>updateMessage
+            <span class="apidocSignatureSpan">(parameters, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-outlook.utilities">module node-outlook.utilities</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.utilities.getUserSegment">
+            function <span class="apidocSignatureSpan">node-outlook.utilities.</span>getUserSegment
+            <span class="apidocSignatureSpan">(parameters)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-outlook.utilities.useMeSegment">
+            function <span class="apidocSignatureSpan">node-outlook.utilities.</span>useMeSegment
+            <span class="apidocSignatureSpan">(parameters)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook" id="apidoc.module.node-outlook">module node-outlook</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook.base" id="apidoc.module.node-outlook.base">module node-outlook.base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.anchorMailbox" id="apidoc.element.node-outlook.base.anchorMailbox">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>anchorMailbox
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">anchorMailbox = function () {
+  return defaultAnchor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.apiEndpoint" id="apidoc.element.node-outlook.base.apiEndpoint">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>apiEndpoint
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apiEndpoint = function () {
+  return endpoint;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.getUser" id="apidoc.element.node-outlook.base.getUser">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>getUser
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUser = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = this.apiEndpoint() + userSpec;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  this.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.makeApiCall" id="apidoc.element.node-outlook.base.makeApiCall">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>makeApiCall
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeApiCall = function (parameters, callback) {
+  // Check required parameters
+  if (parameters.url === undefined || parameters.token === undefined) {
+    trace(&#x27;makeApiCall - ERROR: Missing required parameter&#x27;);
+    if (typeof callback === &#x27;function&#x27;) {
+      callback(&#x27;ERROR: You must include the \&#x27;url\&#x27; and \&#x27;token\&#x27; parameters.&#x27;);
+    }
+    return;
+  }
+
+  var method = parameters.method === undefined ? &#x27;GET&#x27; : parameters.method;
+
+  trace(&#x27;url: &#x27; + parameters.url);
+  trace(&#x27;token: &#x27; + parameters.token);
+  trace(&#x27;method: &#x27; + method);
+
+  var auth = {
+    &#x27;bearer&#x27;: parameters.token
+  };
+
+  var headers = parameters.headers || {};
+  headers[&#x27;Accept&#x27;] = headers[&#x27;Accept&#x27;] || &#x27;application/json&#x27;;
+  headers[&#x27;User-Agent&#x27;] = headers[&#x27;User-Agent&#x27;] || &#x27;node-outlook/2.0&#x27;;
+  headers[&#x27;client-request-id&#x27;] = headers[&#x27;client-request-id&#x27;] || uuid.v4();
+  headers[&#x27;return-client-request-id&#x27;] = headers[&#x27;return-client-request-id&#x27;] || &#x27;true&#x27;;
+
+  // Determine if we have an anchor mailbox to use
+  // Passed parameter has greater priority than module-level default
+  var anchorMbx = &#x27;&#x27;;
+  if (parameters.user &#x26;&#x26; parameters.user.email &#x26;&#x26; parameters.user.email.length &#x3e; 0) {
+    anchorMbx = parameters.user.email;
+  }
+  else {
+    anchorMbx = defaultAnchor;
+  }
+
+  if (anchorMbx.length &#x3e; 0) {
+    headers[&#x27;X-Anchor-Mailbox&#x27;] = anchorMbx;
+  }
+
+  // Determine if we have a time zone to use
+  // Passed parameter has greater priority than module-level default
+  var timezone = &#x27;&#x27;;
+  if (parameters.user &#x26;&#x26; parameters.user.timezone &#x26;&#x26; parameters.user.timezone.length &#x3e; 0) {
+    timezone = parameters.user.timezone;
+  }
+  else {
+    timezone = defaultTimeZone;
+  }
+
+  if (timezone.length &#x3e; 0) {
+    headers[&#x27;Prefer&#x27;] = headers[&#x27;Prefer&#x27;] || [];
+    headers[&#x27;Prefer&#x27;].push(&#x27;outlook.timezone = &#x22;&#x27; + timezone + &#x27;&#x22;&#x27;);
+  }
+
+  var options = {
+    method: method,
+    url: parameters.url,
+    headers: headers,
+    auth: auth,
+    json: true
+  };
+
+  if (parameters.query !== undefined) {
+    trace(&#x27;query:&#x27; + JSON.stringify(parameters.query));
+    options[&#x27;qs&#x27;] = parameters.query;
+  }
+
+  if (fiddlerEnabled) {
+    options[&#x27;proxy&#x27;] = &#x27;http://127.0.0.1:8888&#x27;;
+    options[&#x27;strictSSL&#x27;] = false;
+  }
+
+  if (method.toUpperCase() === &#x27;POST&#x27; || method.toUpperCase() === &#x27;PATCH&#x27;) {
+    if (parameters.payload !== undefined) {
+      trace(&#x27;payload:&#x27; + JSON.stringify(parameters.payload));
+    }
+    options[&#x27;body&#x27;] = parameters.payload;
+  }
+
+  request(options, function(error, response, body) {
+    if (typeof callback === &#x27;function&#x27;) {
+      callback(error, response);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.preferredTimeZone" id="apidoc.element.node-outlook.base.preferredTimeZone">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>preferredTimeZone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preferredTimeZone = function () {
+  return defaultTimeZone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.setAnchorMailbox" id="apidoc.element.node-outlook.base.setAnchorMailbox">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>setAnchorMailbox
+        <span class="apidocSignatureSpan">(newAnchor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAnchorMailbox = function (newAnchor) {
+  defaultAnchor = newAnchor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x27;$orderby&#x27;: &#x27;ReceivedDateTime desc&#x27;,
+  &#x27;$top&#x27;: 10
+};
+
+// Set the API endpoint to use the v2.0 endpoint
+outlook.base.setApiEndpoint(&#x27;https://outlook.office.com/api/v2.0&#x27;);
+// Set the anchor mailbox to the user&#x27;s SMTP address
+outlook.base.<span class="apidocCodeKeywordSpan">setAnchorMailbox</span>(email);
+
+outlook.mail.getMessages({token: token, odataParams: queryParams},
+  function(error, result){
+    if (error) {
+      console.log(&#x27;getMessages returned an error: &#x27; + error);
+    }
+    else if (result) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.setApiEndpoint" id="apidoc.element.node-outlook.base.setApiEndpoint">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>setApiEndpoint
+        <span class="apidocSignatureSpan">(newEndPoint)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setApiEndpoint = function (newEndPoint) {
+  endpoint = newEndPoint;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var queryParams = {
+  &#x27;$select&#x27;: &#x27;Subject,ReceivedDateTime,From&#x27;,
+  &#x27;$orderby&#x27;: &#x27;ReceivedDateTime desc&#x27;,
+  &#x27;$top&#x27;: 10
+};
+
+// Set the API endpoint to use the v2.0 endpoint
+outlook.base.<span class="apidocCodeKeywordSpan">setApiEndpoint</span>(&#x27;https://outlook.office.com/api/v2.0&#x27;);
+// Set the anchor mailbox to the user&#x27;s SMTP address
+outlook.base.setAnchorMailbox(email);
+
+outlook.mail.getMessages({token: token, odataParams: queryParams},
+  function(error, result){
+    if (error) {
+      console.log(&#x27;getMessages returned an error: &#x27; + error);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.setFiddlerEnabled" id="apidoc.element.node-outlook.base.setFiddlerEnabled">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>setFiddlerEnabled
+        <span class="apidocSignatureSpan">(enabled)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setFiddlerEnabled = function (enabled) {
+  fiddlerEnabled = enabled;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.setPreferredTimeZone" id="apidoc.element.node-outlook.base.setPreferredTimeZone">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>setPreferredTimeZone
+        <span class="apidocSignatureSpan">(preferredTimeZone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPreferredTimeZone = function (preferredTimeZone) {
+  defaultTimeZone = preferredTimeZone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.base.setTraceFunc" id="apidoc.element.node-outlook.base.setTraceFunc">
+        function <span class="apidocSignatureSpan">node-outlook.base.</span>setTraceFunc
+        <span class="apidocSignatureSpan">(traceFunc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTraceFunc = function (traceFunc) {
+  traceFunction = traceFunc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook.calendar" id="apidoc.module.node-outlook.calendar">module node-outlook.calendar</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.calendar.createEvent" id="apidoc.element.node-outlook.calendar.createEvent">
+        function <span class="apidocSignatureSpan">node-outlook.calendar.</span>createEvent
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createEvent = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+  var calendarSpec = parameters.calendarId === undefined ? &#x27;&#x27; : &#x27;/Calendars/&#x27; + parameters.calendarId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + calendarSpec + &#x27;/Events&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.event,
+    method: &#x27;POST&#x27;
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 201) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.calendar.deleteEvent" id="apidoc.element.node-outlook.calendar.deleteEvent">
+        function <span class="apidocSignatureSpan">node-outlook.calendar.</span>deleteEvent
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteEvent = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Events/&#x27; + parameters.eventId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    method: &#x27;DELETE&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 204) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.calendar.getEvent" id="apidoc.element.node-outlook.calendar.getEvent">
+        function <span class="apidocSignatureSpan">node-outlook.calendar.</span>getEvent
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEvent = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Events/&#x27; + parameters.eventId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.calendar.getEvents" id="apidoc.element.node-outlook.calendar.getEvents">
+        function <span class="apidocSignatureSpan">node-outlook.calendar.</span>getEvents
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEvents = function (parameters, callback){
+  var userSpec = utilities.getUserSegment(parameters);
+  var calendarSpec = parameters.calendarId === undefined ? &#x27;&#x27; : &#x27;/Calendars/&#x27; + parameters.calendarId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + calendarSpec + &#x27;/Events&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.calendar.updateEvent" id="apidoc.element.node-outlook.calendar.updateEvent">
+        function <span class="apidocSignatureSpan">node-outlook.calendar.</span>updateEvent
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateEvent = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Events/&#x27; + parameters.eventId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.update,
+    method: &#x27;PATCH&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook.contacts" id="apidoc.module.node-outlook.contacts">module node-outlook.contacts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.contacts.createContact" id="apidoc.element.node-outlook.contacts.createContact">
+        function <span class="apidocSignatureSpan">node-outlook.contacts.</span>createContact
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createContact = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+  var folderSpec = parameters.folderId === undefined ? &#x27;&#x27; : &#x27;/ContactFolders/&#x27; + parameters.folderId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + folderSpec + &#x27;/Contacts&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.contact,
+    method: &#x27;POST&#x27;
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 201) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.contacts.deleteContact" id="apidoc.element.node-outlook.contacts.deleteContact">
+        function <span class="apidocSignatureSpan">node-outlook.contacts.</span>deleteContact
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteContact = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Contacts/&#x27; + parameters.contactId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    method: &#x27;DELETE&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 204) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.contacts.getContact" id="apidoc.element.node-outlook.contacts.getContact">
+        function <span class="apidocSignatureSpan">node-outlook.contacts.</span>getContact
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContact = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Contacts/&#x27; + parameters.contactId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.contacts.getContacts" id="apidoc.element.node-outlook.contacts.getContacts">
+        function <span class="apidocSignatureSpan">node-outlook.contacts.</span>getContacts
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContacts = function (parameters, callback){
+  var userSpec = utilities.getUserSegment(parameters);
+  var contactFolderSpec = parameters.folderId === undefined ? &#x27;&#x27; : &#x27;/ContactFolders/&#x27; + parameters.folderId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + contactFolderSpec + &#x27;/Contacts&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.contacts.updateContact" id="apidoc.element.node-outlook.contacts.updateContact">
+        function <span class="apidocSignatureSpan">node-outlook.contacts.</span>updateContact
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateContact = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Contacts/&#x27; + parameters.contactId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.update,
+    method: &#x27;PATCH&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook.mail" id="apidoc.module.node-outlook.mail">module node-outlook.mail</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.createMessage" id="apidoc.element.node-outlook.mail.createMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>createMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+  var folderSpec = parameters.folderId === undefined ? &#x27;&#x27; : getFolderSegment() + parameters.folderId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + folderSpec + &#x27;/Messages&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.message,
+    method: &#x27;POST&#x27;
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 201) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.deleteMessage" id="apidoc.element.node-outlook.mail.deleteMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>deleteMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Messages/&#x27; + parameters.messageId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    method: &#x27;DELETE&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 204) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.getMessage" id="apidoc.element.node-outlook.mail.getMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>getMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Messages/&#x27; + parameters.messageId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.getMessages" id="apidoc.element.node-outlook.mail.getMessages">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>getMessages
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMessages = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+  var folderSpec = parameters.folderId === undefined ? &#x27;&#x27; : getFolderSegment() + parameters.folderId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + folderSpec + &#x27;/Messages&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+// Set the API endpoint to use the v2.0 endpoint
+outlook.base.setApiEndpoint(&#x27;https://outlook.office.com/api/v2.0&#x27;);
+// Set the anchor mailbox to the user&#x27;s SMTP address
+outlook.base.setAnchorMailbox(email);
+
+outlook.mail.<span class="apidocCodeKeywordSpan">getMessages</span>({token: token, odataParams: queryParams},
+  function(error, result){
+    if (error) {
+      console.log(&#x27;getMessages returned an error: &#x27; + error);
+    }
+    else if (result) {
+      console.log(&#x27;getMessages returned &#x27; + result.value.length + &#x27; messages.&#x27;);
+      result.value.forEach(function(message) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.sendDraftMessage" id="apidoc.element.node-outlook.mail.sendDraftMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>sendDraftMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendDraftMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Messages/&#x27; + parameters.messageId + &#x27;/send&#x27;;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    method: &#x27;POST&#x27;
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 202) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.sendNewMessage" id="apidoc.element.node-outlook.mail.sendNewMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>sendNewMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendNewMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/sendmail&#x27;;
+
+  var payload = {
+    Message: parameters.message,
+    SaveToSentItems: parameters.saveToSentItems !== undefined ? parameters.saveToSentItems : &#x27;true&#x27;
+  };
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: payload,
+    method: &#x27;POST&#x27;
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 202) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.syncMessages" id="apidoc.element.node-outlook.mail.syncMessages">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>syncMessages
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">syncMessages = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+  var folderSpec = parameters.folderId === undefined ? &#x27;&#x27; : getFolderSegment() + parameters.folderId;
+
+  var requestUrl = base.apiEndpoint() + userSpec + folderSpec + &#x27;/Messages&#x27;;
+
+  var query = parameters.odataParams || {};
+  if (parameters.skipToken) {
+    query[&#x27;$skiptoken&#x27;] = parameters.skipToken;
+  }
+
+  if (parameters.deltaToken) {
+    query[&#x27;$deltatoken&#x27;] = parameters.deltaToken;
+  }
+
+  var headers = {
+    Prefer: [
+      &#x27;odata.track-changes&#x27;,
+      &#x27;odata.maxpagesize=&#x27; + (parameters.pageSize === undefined ? &#x27;50&#x27; : parameters.pageSize.toString())
+    ]
+  };
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    query: query,
+    headers: headers
+  };
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.mail.updateMessage" id="apidoc.element.node-outlook.mail.updateMessage">
+        function <span class="apidocSignatureSpan">node-outlook.mail.</span>updateMessage
+        <span class="apidocSignatureSpan">(parameters, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateMessage = function (parameters, callback) {
+  var userSpec = utilities.getUserSegment(parameters);
+
+  var requestUrl = base.apiEndpoint() + userSpec + &#x27;/Messages/&#x27; + parameters.messageId;
+
+  var apiOptions = {
+    url: requestUrl,
+    token: parameters.token,
+    user: parameters.user,
+    payload: parameters.update,
+    method: &#x27;PATCH&#x27;
+  };
+
+  if (parameters.odataParams !== undefined) {
+    apiOptions[&#x27;query&#x27;] = parameters.odataParams;
+  }
+
+  base.makeApiCall(apiOptions, function(error, response) {
+    if (error) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(error, response);
+      }
+    }
+    else if (response.statusCode !== 200) {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(&#x27;REST request returned &#x27; + response.statusCode + &#x27;; body: &#x27; + JSON.stringify(response.body), response);
+      }
+    }
+    else {
+      if (typeof callback === &#x27;function&#x27;) {
+        callback(null, response.body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-outlook.utilities" id="apidoc.module.node-outlook.utilities">module node-outlook.utilities</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.utilities.getUserSegment" id="apidoc.element.node-outlook.utilities.getUserSegment">
+        function <span class="apidocSignatureSpan">node-outlook.utilities.</span>getUserSegment
+        <span class="apidocSignatureSpan">(parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserSegment = function (parameters) {
+  return this.useMeSegment(parameters) ? &#x27;/Me&#x27; : &#x27;/Users/&#x27; + parameters.user.email;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-outlook.utilities.useMeSegment" id="apidoc.element.node-outlook.utilities.useMeSegment">
+        function <span class="apidocSignatureSpan">node-outlook.utilities.</span>useMeSegment
+        <span class="apidocSignatureSpan">(parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">useMeSegment = function (parameters) {
+  return parameters.useMe || parameters.user === undefined || parameters.user.email === undefined || parameters.user.email.length
+ &#x3c;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+module.exports = {
+useMeSegment: function(parameters) {
+  return parameters.useMe || parameters.user === undefined || parameters.user.email === undefined || parameters.user.email.length
+ &#x3c;= 0;
+},
+
+getUserSegment: function(parameters) {
+  return this.<span class="apidocCodeKeywordSpan">useMeSegment</span>(parameters) ? &#x27;/Me&#x27; : &#x27;/Users/&#x27; + parameters
+.user.email;
+}
+}
+
+/*
+MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
